@@ -1,0 +1,113 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  ai:
+    specifier: ^5.0.11
+    version: 5.0.11(zod@4.0.17)
+  zod:
+    specifier: ^4.0.17
+    version: 4.0.17
+
+devDependencies:
+  '@types/node':
+    specifier: ^24.2.1
+    version: 24.2.1
+  typescript:
+    specifier: ^5.9.2
+    version: 5.9.2
+
+packages:
+
+  /@ai-sdk/gateway@1.0.5(zod@4.0.17):
+    resolution: {integrity: sha512-GOhxiHm2nfuS618Ia13AWxEIhCsj5+tFaw6sjSO7pvMZT03QgFAJyX4xBYj+3i3mfIvw+yJOvyhVu1fI+pAHQA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@ai-sdk/gateway/-/gateway-1.0.5.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+    dependencies:
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.2(zod@4.0.17)
+      zod: 4.0.17
+    dev: false
+
+  /@ai-sdk/provider-utils@3.0.2(zod@4.0.17):
+    resolution: {integrity: sha512-0a5a6VafkV6+0irdpqnub8WE6qzG2VMsDBpXb9NQIz8c4TG8fI+GSTFIL9sqrLEwXrHdiRj7fwJsrir4jClL0w==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@ai-sdk/provider-utils/-/provider-utils-3.0.2.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+    dependencies:
+      '@ai-sdk/provider': 2.0.0
+      '@standard-schema/spec': 1.0.0
+      eventsource-parser: 3.0.3
+      zod: 4.0.17
+      zod-to-json-schema: 3.24.6(zod@4.0.17)
+    dev: false
+
+  /@ai-sdk/provider@2.0.0:
+    resolution: {integrity: sha512-6o7Y2SeO9vFKB8lArHXehNuusnpddKPk7xqL7T2/b+OvXMRIXUO1rR4wcv1hAFUAT9avGZshty3Wlua/XA7TvA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@ai-sdk/provider/-/provider-2.0.0.tgz}
+    engines: {node: '>=18'}
+    dependencies:
+      json-schema: 0.4.0
+    dev: false
+
+  /@opentelemetry/api@1.9.0:
+    resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@opentelemetry/api/-/api-1.9.0.tgz}
+    engines: {node: '>=8.0.0'}
+    dev: false
+
+  /@standard-schema/spec@1.0.0:
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@standard-schema/spec/-/spec-1.0.0.tgz}
+    dev: false
+
+  /@types/node@24.2.1:
+    resolution: {integrity: sha512-DRh5K+ka5eJic8CjH7td8QpYEV6Zo10gfRkjHCO3weqZHWDtAaSTFtl4+VMqOJ4N5jcuhZ9/l+yy8rVgw7BQeQ==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@types/node/-/node-24.2.1.tgz}
+    dependencies:
+      undici-types: 7.10.0
+    dev: true
+
+  /ai@5.0.11(zod@4.0.17):
+    resolution: {integrity: sha512-PtiQAnhlWuN3Y2z9PifM/9XIQ0HIoHjZqEu7zHffyGEXiqHLtrJpt4IiGVzUTAKxXM5JCtO9sD/hwGXDp7ZYsw==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/ai/-/ai-5.0.11.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+    dependencies:
+      '@ai-sdk/gateway': 1.0.5(zod@4.0.17)
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.2(zod@4.0.17)
+      '@opentelemetry/api': 1.9.0
+      zod: 4.0.17
+    dev: false
+
+  /eventsource-parser@3.0.3:
+    resolution: {integrity: sha512-nVpZkTMM9rF6AQ9gPJpFsNAMt48wIzB5TQgiTLdHiuO8XEDhUgZEhqKlZWXbIzo9VmJ/HvysHqEaVeD5v9TPvA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/eventsource-parser/-/eventsource-parser-3.0.3.tgz}
+    engines: {node: '>=20.0.0'}
+    dev: false
+
+  /json-schema@0.4.0:
+    resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/json-schema/-/json-schema-0.4.0.tgz}
+    dev: false
+
+  /typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/typescript/-/typescript-5.9.2.tgz}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /undici-types@7.10.0:
+    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/undici-types/-/undici-types-7.10.0.tgz}
+    dev: true
+
+  /zod-to-json-schema@3.24.6(zod@4.0.17):
+    resolution: {integrity: sha512-h/z3PKvcTcTetyjl1fkj79MHNEjm+HpD6NXheWjzOekY7kV+lwDYnHw+ivHkijnCSMz1yJaWBD9vu/Fcmk+vEg==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/zod-to-json-schema/-/zod-to-json-schema-3.24.6.tgz}
+    peerDependencies:
+      zod: ^3.24.1
+    dependencies:
+      zod: 4.0.17
+    dev: false
+
+  /zod@4.0.17:
+    resolution: {integrity: sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/zod/-/zod-4.0.17.tgz}
+    dev: false
