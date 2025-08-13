@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ai-sdk/openai':
+    specifier: ^2.0.11
+    version: 2.0.11(zod@4.0.17)
   ai:
     specifier: ^5.0.11
     version: 5.0.11(zod@4.0.17)
+  dotenv:
+    specifier: ^17.2.1
+    version: 17.2.1
   zod:
     specifier: ^4.0.17
     version: 4.0.17
@@ -24,6 +30,17 @@ packages:
 
   /@ai-sdk/gateway@1.0.5(zod@4.0.17):
     resolution: {integrity: sha512-GOhxiHm2nfuS618Ia13AWxEIhCsj5+tFaw6sjSO7pvMZT03QgFAJyX4xBYj+3i3mfIvw+yJOvyhVu1fI+pAHQA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@ai-sdk/gateway/-/gateway-1.0.5.tgz}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+    dependencies:
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.2(zod@4.0.17)
+      zod: 4.0.17
+    dev: false
+
+  /@ai-sdk/openai@2.0.11(zod@4.0.17):
+    resolution: {integrity: sha512-t4i+vS825EC0Gc2DdTsC5UkXIu1ScOi363noTD8DuFZp6WFPHRnW6HCyEQKxEm6cNjv3BW89rdXWqq932IFJhA==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/@ai-sdk/openai/-/openai-2.0.11.tgz}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -79,6 +96,11 @@ packages:
       '@ai-sdk/provider-utils': 3.0.2(zod@4.0.17)
       '@opentelemetry/api': 1.9.0
       zod: 4.0.17
+    dev: false
+
+  /dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==, tarball: https://nexus.core.cvent.org/nexus/repository/npm-public/dotenv/-/dotenv-17.2.1.tgz}
+    engines: {node: '>=12'}
     dev: false
 
   /eventsource-parser@3.0.3:
