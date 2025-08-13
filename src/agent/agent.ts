@@ -17,7 +17,7 @@ export class Agent {
 
   constructor() {
     dotenv.config();
-    this.client = openai("gpt-4o-mini");
+    this.client = openai("gpt-4.1");
     this.systemPrompt = AGENT_INSTRUCTIONS;
     this.messageMemory = [];
     this.tools = {
@@ -30,28 +30,18 @@ export class Agent {
   }
 
   public processUserMessage = async (userMessage: string): Promise<string> => {
-    const response = await generateText({
+    this.messageMemory.push({ role: 'user', content: userMessage });
+    const agentResponse = await generateText({
       model: this.client,
       system: this.systemPrompt,
-      stopWhen: stepCountIs(20),
-      messages: [
-        ...this.messageMemory,
-        { role: 'user', content: userMessage }
-      ],
+      stopWhen: stepCountIs(50),
+      messages: this.messageMemory,
       tools: this.tools,
-      temperature: 0,
-    //   onStepFinish(result) {
-    //     // { text, toolCalls, toolResults, finishReason, usage }
-    //     console.log(`Step finished. ${JSON.stringify(result)}`);
-      
-    // }
+      temperature: 0
     });
-    console.log("Agent response:", JSON.stringify(response));
-    const { steps, text } = response;
-    for (const step of steps) {
-      console.log(step.toolCalls);
-    }
-    // this.messageMemory.push(steps);
+
+    const { response, text } = agentResponse;
+    this.messageMemory.push(...response.messages);
     return text;
   };
 }
