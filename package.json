@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "chat": "node dist/src/index.js"
+    "chat": "node dist/src/index.js",
+    "clear-memory": "node dist/src/index.js clear"
   },
   "keywords": [],
   "author": "",
