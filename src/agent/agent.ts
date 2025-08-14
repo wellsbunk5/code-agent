@@ -9,6 +9,7 @@ import { AGENT_INSTRUCTIONS } from './instructions';
 import { DEBUG, OPENAI_MODEL } from '..';
 import { writeFileTool } from '../tools/write-tool';
 import { checkCodeTool } from '../tools/code-check';
+import { readImageTextTool } from '../tools/read-image-text';
 
 
 export class Agent {
@@ -28,6 +29,7 @@ export class Agent {
       readFileTool,
       searchFileTool,
       editFileTool,
+      readImageTextTool,
       runBashCommandTool
     };
   }

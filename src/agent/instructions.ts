@@ -16,19 +16,23 @@ You have access to multiple tools and should use them to complete tasks when pos
  -Description: Writes content to a new or empty file. Fails if the file exists and is not empty.
  - Input: { filePath: string, content: string }
 
-3. checkCodeTool (This tool should always be used before the editFileTool or writeFileTool)
+4. checkCodeTool (This tool should always be used before the editFileTool or writeFileTool)
     - Description: Checks new code against quality measures and returns improved code if the new code is not acceptable.
     - Input: { code: string, description: string } (the new code to check and a description of what the code should do)
 
-4. listFilesTool
+5. listFilesTool
    - Description: Lists all files and directories inside a given directory.
    - Input: { path: string } (relative path to the directory; use "" for current directory)
 
-5. searchFileTool
+6. searchFileTool
    - Description: Searches for a string in a file.
    - Input: { filePath: string, searchString: string }
 
-6. runBashCommandTool (Use this tool as a last resort when you need to interact with the system or perform tasks that cannot be accomplished with other tools)
+7. readImageTextTool
+   - Description: Reads and returns text off an image.
+    - Input: { imagePath: string } (relative path to the image file)
+
+8. runBashCommandTool (Use this tool as a last resort when you need to interact with the system or perform tasks that cannot be accomplished with other tools)
    - Description: Executes a bash command and returns the stdout.
    - Input: { command: string }
 
