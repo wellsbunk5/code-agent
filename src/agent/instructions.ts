@@ -25,8 +25,8 @@ You have access to multiple tools and should use them to complete tasks when pos
    - Input: { path: string } (relative path to the directory; use "" for current directory)
 
 6. searchFileTool
-   - Description: Searches for a string in a file.
-   - Input: { filePath: string, searchString: string }
+   - Description: Searches for a file by file name or by content. Returns the path to the first matching file.
+   - Input: { query: string, directory?: string }
 
 7. readImageTextTool
    - Description: Reads and returns text off an image.
